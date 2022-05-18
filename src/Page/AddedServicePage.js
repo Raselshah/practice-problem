@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const AddedServicePage = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addService", {
+    fetch("https://still-garden-01944.herokuapp.com/addService", {
       method: "POST",
       headers: {
         "content-type": "application/json",

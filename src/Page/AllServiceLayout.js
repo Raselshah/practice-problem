@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const AllServiceLayout = ({ service }) => {
   const handleDeleteService = (id) => {
     console.log(id);
-    const url = `http://localhost:5000/serviceDelete/${id}`;
+    const url = `https://still-garden-01944.herokuapp.com/serviceDelete/${id}`;
     const proceed = window.confirm("Are you sure delete this one");
     if (proceed) {
       fetch(url, {
@@ -22,14 +22,14 @@ const AllServiceLayout = ({ service }) => {
   };
 
   return (
-    <div class="card bg-base-100 shadow-xl">
-      <div class="card-body">
-        <h2 class="card-title">{service.name}</h2>
+    <div className="card bg-base-100 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title">{service.name}</h2>
         <p>{service.description}</p>
-        <div class="card-actions justify-end">
+        <div className="card-actions justify-end">
           <button
             onClick={() => handleDeleteService(service._id)}
-            class="btn btn-primary btn-xs"
+            className="btn btn-primary btn-xs"
           >
             Delete Service
           </button>
